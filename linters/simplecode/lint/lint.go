@@ -8,9 +8,9 @@
 package lint // import "github.com/lhlyu/goreporter/linters/simplecode/lint"
 
 import (
-	_ "unsafe"
 	"bytes"
 	"fmt"
+	"github.com/lhlyu/goreporter/linters/simplecode/lint/gcimporter15"
 	"go/ast"
 	"go/constant"
 	"go/parser"
@@ -20,6 +20,7 @@ import (
 	"regexp"
 	"sort"
 	"strings"
+	_ "unsafe"
 )
 
 type Func func(*File)
@@ -215,8 +216,7 @@ argLoop:
 	return &p.problems[len(p.problems)-1]
 }
 
-//go:linkname gcImporter golang.org/x/tools/go/internal/gcimporter.Import
-var gcImporter func(packages map[string]*types.Package, path, srcDir string) (*types.Package, error)
+var gcImporter = gcimporter.Import
 
 // importer implements go/types.Importer.
 // It also implements go/types.ImporterFrom, which was new in Go 1.6,

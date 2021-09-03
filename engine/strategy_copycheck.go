@@ -54,7 +54,7 @@ func (s *StrategyCopyCheck) Compute(parameters StrategyParameter) (summaries *Su
 			errorSlice = append(errorSlice, Error{LineNumber: line, ErrorString: strings.Join(values, ":")})
 		}
 		summaries.Lock()
-		summaries.Summaries[string(i)] = Summary{
+		summaries.Summaries[strconv.Itoa(i)] = Summary{
 			Name:   strconv.Itoa(len(errorSlice)),
 			Errors: errorSlice,
 		}
