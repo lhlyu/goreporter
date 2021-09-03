@@ -22,7 +22,7 @@
 
 `linters/simplecode/lint/lint.go` 内存在一个变量 `var gcImporter` ,
 需要引用 `golang.org/x/tools/go/internal/gcimporter`, 因为go module无法直接使用第三方的internal内容,
-所有使用了 `go:linkname`
+所以使用了 `go:linkname`
 
 ```go
 var gcImporter = gcimporter.Import
