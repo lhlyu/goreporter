@@ -16,21 +16,3 @@
 ## 使用
 
 跟原项目一样，[文档](https://github.com/qax-os/goreporter#run-it)
-
-
-## 遇到的问题
-
-`linters/simplecode/lint/lint.go` 内存在一个变量 `var gcImporter` ,
-需要引用 `golang.org/x/tools/go/internal/gcimporter`, 因为go module无法直接使用第三方的internal内容,
-所以使用了 `go:linkname`
-
-```go
-var gcImporter = gcimporter.Import
-```
-
-改造后
-
-```go
-//go:linkname gcImporter golang.org/x/tools/go/internal/gcimporter.Import
-var gcImporter func(packages map[string]*types.Package, path, srcDir string) (*types.Package, error)
-```
