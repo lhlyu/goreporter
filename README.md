@@ -6,6 +6,11 @@
 
 ## 安装
 
+### 要求
+
+- go 1.16+
+- [Graphviz](http://www.graphviz.org/download/)
+
 `go get -u github.com/lhlyu/goreporter`
 
 ## 使用
