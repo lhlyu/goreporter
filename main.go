@@ -27,9 +27,9 @@ import (
 	"sync"
 	"time"
 
+	"github.com/facebookgo/inject"
 	"github.com/lhlyu/goreporter/engine"
 	"github.com/lhlyu/goreporter/engine/processbar"
-	"github.com/facebookgo/inject"
 )
 
 // Received parameters, you can control some features using:
