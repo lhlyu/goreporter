@@ -14,3 +14,7 @@ This project is a clone of [https://github.com/qax-os/goreporter](https://github
 ## Run it
 
 Same as the original project，[link](https://github.com/qax-os/goreporter#run-it)
+
+## Warning
+
+The project may have unknown bugs, you can try this open source library [https://github.com/golangci/golangci-lint](https://github.com/golangci/golangci-lint)
