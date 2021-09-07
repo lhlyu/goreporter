@@ -17,4 +17,4 @@ Same as the original project，[link](https://github.com/qax-os/goreporter#run-i
 
 ## Warning
 
-The project may have unknown bugs, you can try this open source library [https://github.com/golangci/golangci-lint](https://github.com/golangci/golangci-lint)
+The project may have unknown bugs, you can try this repositore [https://github.com/golangci/golangci-lint](https://github.com/golangci/golangci-lint)
